@@ -46,6 +46,16 @@ db.execute('''
 ''')
 print("ACTION table created successfully.")
 
+# ACTIONCOLLECTION table
+db.execute('''
+  CREATE TABLE IF NOT EXISTS ACTION_COLLECTION (
+      id INTEGER PRIMARY KEY,
+      action_ref integer NOT NULL
+      FOREIGN KEY (action_ref) REFERENCES ACTIONS(id)
+      )
+''')
+print("ACTION table created successfully.")
+
 # comes last due to foreign key requirements
 db.execute('''
   CREATE TABLE IF NOT EXISTS CREATURE (
@@ -61,10 +71,10 @@ db.execute('''
       senses_ref INTEGER NOT NULL,
       languages TEXT,
       challenge_rating TEXT,
-      actions_ref INTEGER NOT NULL,
+      action_collection_ref INTEGER NOT NULL,
       FOREIGN KEY (attribute_ref) REFERENCES ATTRIBUTES(id),
       FOREIGN KEY (senses_ref) REFERENCES SENSES(id),
-      FOREIGN KEY (actions_ref) REFERENCES ACTIONS(id)
+      FOREIGN KEY (action_collection_ref) REFERENCES ACTION_COLLECTION(id)
       )
 ''')
 print("CREATURE table created successfully.")
