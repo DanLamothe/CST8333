@@ -9,8 +9,16 @@ __author__ = 'User'
 
 import sqlite3
 
-db = sqlite3.connect('cst8333.db')
+db = sqlite3.connect('db\cst8333.db')
 print("Opened database successfully.")
+
+# Clears the old database records [@DL to be removed later]
+db.execute('DROP TABLE CREATURE')
+db.execute('DROP TABLE ATTRIBUTES')
+db.execute('DROP TABLE SENSES')
+db.execute('DROP TABLE ACTION_COLLECTION')
+db.execute('DROP TABLE ACTIONS')
+db.commit()
 
 db.execute('''
   CREATE TABLE IF NOT EXISTS ATTRIBUTES (
@@ -50,7 +58,7 @@ print("ACTION table created successfully.")
 db.execute('''
   CREATE TABLE IF NOT EXISTS ACTION_COLLECTION (
       id INTEGER PRIMARY KEY,
-      action_ref integer NOT NULL
+      action_ref integer NOT NULL,
       FOREIGN KEY (action_ref) REFERENCES ACTIONS(id)
       )
 ''')

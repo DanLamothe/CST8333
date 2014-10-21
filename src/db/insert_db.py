@@ -2,33 +2,35 @@ __author__ = 'User'
 
 import sqlite3
 
+__name__ = "insert_db"
+
 
 def create_tuna_fish():
-    db = sqlite3.connect('cst8333.db')
+    db = sqlite3.connect('db\cst8333.db')
     print("Opened database successfully.")
 
     # Creates the Dire Tuna Fish creature
     db.execute('''
-      INSERT INTO ACTIONS (id, name, description, attack, hit)
-        VALUES (1, "Slam", "Melee natural attack", "+7 to hit, reach 5ft., one target", "13 (2d8+4) bludgeoning damage" )
+      INSERT INTO ACTIONS (name, description, attack, hit)
+        VALUES ("Slam", "Melee natural attack", "+7 to hit, reach 5ft., one target", "13 (2d8+4) bludgeoning damage" )
     ''')
 
     db.execute('''
-      INSERT INTO ACTION_COLLECTION (id, action_ref)
-        VALUES (1, 1)
+      INSERT INTO ACTION_COLLECTION (action_ref)
+        VALUES (1)
     ''')
 
     db.execute('''
-      INSERT INTO SENSES (id, darkvision)
-        VALUES (1, "Darkvision 40ft.")
+      INSERT INTO SENSES (darkvision)
+        VALUES ("Darkvision 40ft.")
     ''')
     db.execute('''
-      INSERT INTO ATTRIBUTES (id, strength, dexterity, constitution, intelligence, wisdom, charisma)
-        VALUES (1, 17, 14, 15, 5, 10, 5 )
+      INSERT INTO ATTRIBUTES (strength, dexterity, constitution, intelligence, wisdom, charisma)
+        VALUES (17, 14, 15, 5, 10, 5 )
     ''')
     db.execute('''
-      INSERT INTO CREATURE (id, name, size, type, alignment, ac, hp, speed, attribute_ref, senses_ref, languages, challenge_rating, action_collection_ref)
-        VALUES (1, "Dire Tuna Fish", "Large", "beast", "true neutral", 12, "59 (7d10+21)", "70ft. (swim)", 1, 1, NULL, "2 (450xp)", 1)
+      INSERT INTO CREATURE (name, size, type, alignment, ac, hp, speed, attribute_ref, senses_ref, languages, challenge_rating, action_collection_ref)
+        VALUES ("Dire TunaFish", "Large", "beast", "true neutral", 12, "59 (7d10+21)", "70ft. (swim)", 1, 1, NULL, "2 (450xp)", 1)
     ''')
     db.commit()
     print("Changes saved.")
@@ -37,7 +39,7 @@ def create_tuna_fish():
 
 # Creates the Dire Tuna Fish creature
 def create_creature(creature):
-    db = sqlite3.connect('cst8333.db')
+    db = sqlite3.connect('db\cst8333.db')
     print("Opened database successfully.")
     cursor = db.cursor()
 
@@ -96,3 +98,6 @@ def create_creature(creature):
     print("Changes saved.")
 
     db.close()
+
+# Creates the basic dire tunafish as seen in Exercise 04
+create_tuna_fish()

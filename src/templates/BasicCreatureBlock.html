@@ -1,7 +1,7 @@
 <div contenteditable="true"  style="width:310px; font-family:Arial,Helvetica,sans-serif;font-size:11px;">
 
-<div style="font-size: 18; font-weight: bold;"> Dire TunaFish </div>
-<div> Large beast, true neutral </div>
+<div style="font-size: 18; font-weight: bold;"> $name </div>
+<div> $size $type, $alignment </div>
 
 <div style="background: linear-gradient(10deg, black, white);
     height:5px;
@@ -9,9 +9,9 @@
 </div>
 
 <div>
-	<div><span>Armor Class</span><span> 12 (natural armor) </span></div>
-	<div><span>Hit Points</span><span> 59 (7d10+21) </span></div>
-	<div><span>Speed</span><span> 70ft. (swim) </span></div>
+	<div><span>Armor Class</span><span> $ac </span></div>
+	<div><span>Hit Points</span><span> $hp </span></div>
+	<div><span>Speed</span><span> $speed </span></div>
 </div>
 
 <div style="background: linear-gradient(10deg, black, white);
@@ -21,13 +21,13 @@
 
 <table>
     <tr><th>STR    </th><th>DEX   </th><th>CON    </th><th>INT   </th><th>WIS   </th><th>CHA   </th></tr>
-    <tr><td> 17 (+3) </td><td> 14 (+2) </td><td> 15 (+2) </td><td> 5 (-2) </td><td> 10 (0) </td><td> 5 (-2) </td></tr>
+    <tr><td> $str </td><td> $dex </td><td> $con </td><td> $int </td><td> $wis </td><td> $cha </td></tr>
 </table>
 
 <div>
-	<div><span style = "font-weight: bold;">Senses</span><span> darkvision 40ft. passive Perception 10 </span></div>
-	<div><span style = "font-weight: bold;">Languages</span><span> none </span></div>
-	<div><span style = "font-weight: bold;">Challenge</span><span> 2 (450xp) </span></div> 
+	<div><span style = "font-weight: bold;">Senses</span><span> $senses </span></div>
+	<div><span style = "font-weight: bold;">Languages</span><span> $languages </span></div>
+	<div><span style = "font-weight: bold;">Challenge</span><span> $challenge </span></div>
 </div>
 
 <div style="background: linear-gradient(10deg, black, white);
@@ -37,4 +37,7 @@
 
 <div style="font-size: 13; font-style: italic;">Actions</div>
 
-<div><span style="font-weight: bold;"> Slam </span><span> Melee Natural Attack </span><span> +7 to hit, reach 5ft., one target. </span><span> Hit: 13 (2d8+4) bludgeoning damage </span></div>   
+<div><span style="font-weight: bold;"> $attack </span><span> $attackDescription </span></div>
+<div><span> Attack:</span> $attackHit</div>
+<div><span> Hit:</span> $attackDamage </div>
+</div>
