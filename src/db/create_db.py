@@ -1,8 +1,9 @@
-'''
-    Creates the database if it doesn't already exist.
-    By: Daniel Lamothe
-    Last Modified: 2014-10-19
-'''
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# File Name: create_db.py
+# By: Daniel Lamothe
+#
+# Purpose: Drops any existing tables and rebuilds the database architecture.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 __author__ = 'User'
 

@@ -1,8 +1,14 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# File Name: insert_db.py
+# By: Daniel Lamothe
+#
+# Purpose: Inserts the demo data for the Dire TunaFish Creature for the first Prototype. Beginnings of the Data Access
+#  Layer.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 __author__ = 'User'
+__name__ = "insert_db"
 
 import sqlite3
-
-__name__ = "insert_db"
 
 
 def create_tuna_fish():

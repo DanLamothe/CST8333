@@ -132,9 +132,10 @@ file_out = open(file_name, 'w')
 # Make the substitutions
 file_out.write(src.substitute(stats))
 
-# Free resources by closing the destination file. Should now open in a browser!
+# Free resources by closing the destination file. Will be found in the src folder. Can open in browser.
 file_out.close()
 print('Dire Tunafish Created!')
 
 # close the template
 file_in.close()
+
