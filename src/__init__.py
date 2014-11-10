@@ -20,13 +20,13 @@ from string import Template
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Runs the Create DB Library to create the application database
-os.system('python db\create_db.py')
+os.system(r'python db\create_db.py')
 
 # Insert initial records into the database
-os.system('python db\insert_db.py')
+os.system(r'python db\insert_db.py')
 
 # Select the records to show they are indeed there
-os.system('python db\select_db.py')
+os.system(r'python db\select_db.py')
 
 print('\nTASK1 - Database successfully set up!\n')
 
@@ -35,7 +35,7 @@ print('\nTASK1 - Database successfully set up!\n')
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Open the template'
-file_in = open('templates\BasicCreatureBlock.html', 'r')
+file_in = open(r'templates\BasicCreatureBlock.html', 'r')
 
 # Read the statblock
 src = Template(file_in.read())
@@ -65,7 +65,7 @@ stats = {'name': '',
          'attackDamage': ''}
 
 # Retrieve the database data from the ACTIONS Table
-db = sqlite3.connect('db\cst8333.db')
+db = sqlite3.connect(r'db\cst8333.db')
 cursor = db.execute("SELECT * from ACTIONS")
 
 for row in cursor:
@@ -78,7 +78,7 @@ print("Read ACTIONS successfully.")
 db.close()
 
 # Retrieve the database data from the SENSES Table
-db = sqlite3.connect('db\cst8333.db')
+db = sqlite3.connect(r'db\cst8333.db')
 cursor = db.execute("SELECT * from SENSES")
 
 for row in cursor:
@@ -88,7 +88,7 @@ print("Read SENSES successfully")
 db.close()
 
 # Retrieve the database data from the ATTRIBUTES Table
-db = sqlite3.connect('db\cst8333.db')
+db = sqlite3.connect(r'db\cst8333.db')
 cursor = db.execute("SELECT * from ATTRIBUTES")
 
 for row in cursor:
@@ -103,7 +103,7 @@ print("Read ATTRIBUTES successfully")
 db.close()
 
 # Retrieve the database data from the CREATURE Table
-db = sqlite3.connect('db\cst8333.db')
+db = sqlite3.connect(r'db\cst8333.db')
 cursor = db.execute("SELECT * from CREATURE")
 
 for row in cursor:
