@@ -8,6 +8,7 @@ __author__ = 'User'
     Purpose: A Python class that representing a collection of information and statistics representing a creature in a
             fantasy RPG.
 '''
+import Database
 
 
 class Creature:
@@ -50,12 +51,10 @@ class Creature:
         self.actionSet = actionSet
 
     def save(self):
-        pass
+        Database.Database.save(self)
 
     def update(self):
         pass
 
     def delete(self):
-        pass
-
-    __init__()
+        Database.Database.delete(self)
