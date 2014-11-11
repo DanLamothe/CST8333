@@ -81,9 +81,9 @@ db.execute('''
       languages TEXT,
       challenge_rating TEXT,
       action_collection_ref INTEGER NOT NULL,
-      FOREIGN KEY (attribute_ref) REFERENCES ATTRIBUTES(id),
-      FOREIGN KEY (senses_ref) REFERENCES SENSES(id),
-      FOREIGN KEY (action_collection_ref) REFERENCES ACTION_COLLECTION(id)
+      FOREIGN KEY (attribute_ref) REFERENCES ATTRIBUTES(id) ON DELETE CASCADE,
+      FOREIGN KEY (senses_ref) REFERENCES SENSES(id) ON DELETE CASCADE,
+      FOREIGN KEY (action_collection_ref) REFERENCES ACTION_COLLECTION(id) ON DELETE CASCADE
       )
 ''')
 print("CREATURE table created successfully.")
