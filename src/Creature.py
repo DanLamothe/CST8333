@@ -57,3 +57,5 @@ class Creature:
 
     def delete(self):
         pass
+
+    __init__()

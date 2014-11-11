@@ -9,12 +9,10 @@ __author__ = 'User'
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 import sqlite3
+import Creature
 
 
 class Database:
-    # Data Members
-        # Connection Variable
-        # Cursor Variable
 
     # Default Constructor
     def __init__(self):
@@ -25,7 +23,7 @@ class Database:
         pass
 
     @staticmethod
-    def save(self, creature):
+    def save(creature):
         try:
             db = sqlite3.connect('db\cst8333.db')
             print("Opened database successfully.")
@@ -98,7 +96,7 @@ class Database:
         pass
 
     @staticmethod
-    def delete(self, creature):
+    def delete(creature):
         try:
             db = sqlite3.connect('db\cst8333.db')
             print("Opened database successfully.")
@@ -125,3 +123,97 @@ class Database:
         finally:
             db.close()
 
+    @staticmethod
+    def read(creature_name):
+        try:
+            db = sqlite3.connect('db\cst8333.db')
+            print("Opened database successfully.")
+            cursor = db.cursor()
+
+            var = str.format('''
+                SELECT FROM CREATURE WHERE CREATURE.name = ?
+            ''', creature_name)
+            cursor.execute(var)
+
+            # from the Creature Table
+            for row in cursor:
+                name = row[1]
+                size = row[2]
+                type = row[3]
+                alignment = row[4]
+                ac = row[5]
+                hp = row[6]
+                speed = row[7]
+                attribute_ref = row[8]
+                senses_ref = row[9]
+                languages = row[10]
+                challenge_rating = row[11]
+                action_collection_ref = row[12]
+
+            # from the Attributes Table
+            var = str.format('''
+                SELECT FROM ATTRIBUTES WHERE ATTRIBUTES.ID = ?
+            ''', attribute_ref)
+            cursor.execute(var)
+
+            attributes = {}
+            for row in cursor:
+                attributes.__setitem__('STR', row[1])
+                attributes.__setitem__('DEX', row[2])
+                attributes.__setitem__('CON', row[3])
+                attributes.__setitem__('INT', row[4])
+                attributes.__setitem__('WIS', row[5])
+                attributes.__setitem__('CHA', row[6])
+
+            # from the Senses Table
+            var = str.format('''
+                SELECT FROM SENSES WHERE SENSES.ID = ?
+            ''', senses_ref)
+            cursor.execute(var)
+
+            senses = {}
+            for row in cursor:
+                senses.__setitem__('DarkVision', row[1])
+                senses.__setitem__('TremorSense', row[2])
+                senses.__setitem__('BlindSense', row[3])
+
+            # from the Action Collection Table
+            var = str.format('''
+                SELECT FROM ACTION_COLLECTION WHERE ACTION_COLLECTION.ID = ?
+            ''', action_collection_ref)
+            cursor.execute(var)
+
+            action_collection = []
+            for row in cursor:
+                action_collection.append(row[int])
+
+            # Retrieving the actions
+            action_set = []
+            for fk in action_collection:
+                var = str.format('''
+                    SELECT FROM ACTIONS WHERE ACTIONS.ID = ?
+                ''', fk)
+                cursor.execute(var)
+
+                action = {}
+                for row in cursor:
+                    action.__setitem__('Name', row[1])
+                    action.__setitem__('Description', row[2])
+                    action.__setitem__('Attack', row[3])
+                    action.__setitem__('Hit', row[4])
+
+                # Add the Dictionary to the List ¯\_(ツ)_/¯
+                action_set.append(action)
+            my_creature = Creature(name, size, type, alignment, ac, hp, speed, attributes, senses, languages,
+                                   challenge_rating, action_set)
+        except Exception as e:
+            print(e)
+            db.rollback()
+        finally:
+            db.close()
+
+        if my_creature is object:
+            return my_creature
+        else:
+            print('Failure to create Creature in memory... \n Terminating...')
+            exit()
