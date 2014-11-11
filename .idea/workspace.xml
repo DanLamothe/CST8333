@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8bf2843-16b8-4328-962b-c0a4ff1bfc38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Creature.py" afterPath="$PROJECT_DIR$/src/Creature.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/__init__.py" afterPath="$PROJECT_DIR$/src/__init__.py" />
     </list>
     <ignored path="CST8333.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,17 +31,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.75" vertical-offset="255" max-vertical-offset="2499">
-              <caret line="64" column="28" selection-start-line="45" selection-start-column="0" selection-end-line="64" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.18478261" vertical-offset="0" max-vertical-offset="920">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding>
-                <element signature="e#688#697#0" expanded="true" />
-                <marker date="1415675497265" expanded="true" signature="2510:2531" placeholder="SELECT * fro..ACTIONS..." />
-                <marker date="1415675497265" expanded="true" signature="2894:2914" placeholder="SELECT * fro..SENSES..." />
-                <marker date="1415675497265" expanded="true" signature="3139:3163" placeholder="SELECT * fro..ATTRIBUTES..." />
-                <marker date="1415675497265" expanded="true" signature="3572:3594" placeholder="SELECT * fro..CREATURE..." />
+                <element signature="e#694#703#0" expanded="true" />
+                <marker date="1415679021722" expanded="true" signature="429:451" placeholder="SELECT * fro..CREATURE..." />
               </folding>
             </state>
           </provider>
@@ -50,8 +47,8 @@
       <file leaf-file-name="Database.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1239" max-vertical-offset="2159">
-              <caret line="200" column="51" selection-start-line="200" selection-start-column="40" selection-end-line="200" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="2159">
+              <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
               <folding>
                 <element signature="e#652#656#0" expanded="false" />
                 <element signature="e#695#716#0" expanded="false" />
@@ -75,11 +72,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Creature.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="insert_db.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/db/insert_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1955">
+              <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+              <folding>
+                <marker date="1413862871457" expanded="true" signature="656:827" placeholder="INSERT INTO ..." />
+                <marker date="1413862871457" expanded="true" signature="863:924" placeholder="INSERT INTO ..." />
+                <marker date="1413862871457" expanded="true" signature="960:1027" placeholder="INSERT INTO ..." />
+                <marker date="1413862871457" expanded="true" signature="1062:1191" placeholder="INSERT INTO ..." />
+                <marker date="1413862871457" expanded="true" signature="1226:1501" placeholder="INSERT INTO ..." />
+                <marker date="1413862871457" expanded="true" signature="1938:2025" placeholder="INSERT INTO ..." />
+                <marker date="1413862871457" expanded="true" signature="2363:2424" placeholder="INSERT INTO ..." />
+                <marker date="1413862871457" expanded="true" signature="2640:2721" placeholder="INSERT INTO ..." />
+                <marker date="1413862871457" expanded="true" signature="2995:3119" placeholder="INSERT INTO ..." />
+                <marker date="1413862871457" expanded="true" signature="3724:3910" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Creature.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Creature.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9217391" vertical-offset="631" max-vertical-offset="1972">
-              <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1052" max-vertical-offset="1972">
+              <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
               <folding>
                 <element signature="e#450#465#0" expanded="true" />
                 <element signature="e#1060#1064#0" expanded="false" />
@@ -111,12 +129,12 @@
         <option value="$PROJECT_DIR$/src/db/insert_db.py" />
         <option value="$PROJECT_DIR$/src/templates/BasicCreatureBlock.html" />
         <option value="$PROJECT_DIR$/src/db/select_db.py" />
-        <option value="$PROJECT_DIR$/src/__init__.py" />
         <option value="$PROJECT_DIR$/src/db/create_db.py" />
         <option value="$PROJECT_DIR$/src/classes/Creature_class.py" />
         <option value="$PROJECT_DIR$/src/classes/Database.py" />
         <option value="$PROJECT_DIR$/src/Database.py" />
         <option value="$PROJECT_DIR$/src/Creature.py" />
+        <option value="$PROJECT_DIR$/src/__init__.py" />
       </list>
     </option>
   </component>
@@ -627,16 +645,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1955">
           <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
           <folding>
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="656:827" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="863:924" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="960:1027" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1062:1191" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1226:1501" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1938:2025" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2363:2424" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2640:2721" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2995:3119" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="3724:3910" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -646,11 +664,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1579" max-vertical-offset="2499">
           <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding>
-            <element signature="e#688#697#0" expanded="true" />
-            <marker date="1415675497265" expanded="true" signature="2510:2531" placeholder="SELECT * fro..ACTIONS..." />
-            <marker date="1415675497265" expanded="true" signature="2894:2914" placeholder="SELECT * fro..SENSES..." />
-            <marker date="1415675497265" expanded="true" signature="3139:3163" placeholder="SELECT * fro..ATTRIBUTES..." />
-            <marker date="1415675497265" expanded="true" signature="3572:3594" placeholder="SELECT * fro..CREATURE..." />
+            <element signature="e#694#703#0" expanded="true" />
+            <marker date="1415679021722" expanded="true" signature="429:451" placeholder="SELECT * fro..CREATURE..." />
           </folding>
         </state>
       </provider>
@@ -708,16 +723,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1955">
           <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
           <folding>
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="656:827" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="863:924" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="960:1027" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1062:1191" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1226:1501" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1938:2025" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2363:2424" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2640:2721" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2995:3119" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="3724:3910" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -727,11 +742,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1891" max-vertical-offset="2499">
           <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding>
-            <element signature="e#688#697#0" expanded="true" />
-            <marker date="1415675497265" expanded="true" signature="2510:2531" placeholder="SELECT * fro..ACTIONS..." />
-            <marker date="1415675497265" expanded="true" signature="2894:2914" placeholder="SELECT * fro..SENSES..." />
-            <marker date="1415675497265" expanded="true" signature="3139:3163" placeholder="SELECT * fro..ATTRIBUTES..." />
-            <marker date="1415675497265" expanded="true" signature="3572:3594" placeholder="SELECT * fro..CREATURE..." />
+            <element signature="e#694#703#0" expanded="true" />
+            <marker date="1415679021722" expanded="true" signature="429:451" placeholder="SELECT * fro..CREATURE..." />
           </folding>
         </state>
       </provider>
@@ -788,16 +800,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="831" max-vertical-offset="1751">
           <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
           <folding>
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="656:827" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="863:924" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="960:1027" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1062:1191" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1226:1501" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1938:2025" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2363:2424" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2640:2721" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2995:3119" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="3724:3910" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -846,16 +858,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="508" max-vertical-offset="1666">
           <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
           <folding>
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="656:827" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="863:924" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="960:1027" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1062:1191" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1226:1501" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1938:2025" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2363:2424" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2640:2721" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2995:3119" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="3724:3910" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -897,16 +909,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="595">
           <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
           <folding>
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="656:827" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="863:924" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="960:1027" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1062:1191" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1226:1501" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1938:2025" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2363:2424" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2640:2721" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2995:3119" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="3724:3910" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -960,25 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/insert_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6304348" vertical-offset="1035" max-vertical-offset="1955">
-          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
-          <folding>
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1413862871457" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/create_db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.020652173" vertical-offset="508" max-vertical-offset="1683">
@@ -998,16 +991,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+    <entry file="file://$PROJECT_DIR$/src/db/insert_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.75" vertical-offset="255" max-vertical-offset="2499">
-          <caret line="64" column="28" selection-start-line="45" selection-start-column="0" selection-end-line="64" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1955">
+          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
           <folding>
-            <element signature="e#688#697#0" expanded="true" />
-            <marker date="1415675497265" expanded="true" signature="2510:2531" placeholder="SELECT * fro..ACTIONS..." />
-            <marker date="1415675497265" expanded="true" signature="2894:2914" placeholder="SELECT * fro..SENSES..." />
-            <marker date="1415675497265" expanded="true" signature="3139:3163" placeholder="SELECT * fro..ATTRIBUTES..." />
-            <marker date="1415675497265" expanded="true" signature="3572:3594" placeholder="SELECT * fro..CREATURE..." />
+            <marker date="1413862871457" expanded="true" signature="656:827" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="863:924" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="960:1027" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1062:1191" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1226:1501" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="1938:2025" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2363:2424" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2640:2721" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="2995:3119" placeholder="INSERT INTO ..." />
+            <marker date="1413862871457" expanded="true" signature="3724:3910" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1015,7 +1013,7 @@
     <entry file="file://$PROJECT_DIR$/src/Database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1239" max-vertical-offset="2159">
-          <caret line="200" column="51" selection-start-line="200" selection-start-column="40" selection-end-line="200" selection-end-column="51" />
+          <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
           <folding>
             <element signature="e#652#656#0" expanded="false" />
             <element signature="e#695#716#0" expanded="false" />
@@ -1040,13 +1038,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Creature.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9217391" vertical-offset="631" max-vertical-offset="1972">
-          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="1972">
+          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
           <folding>
             <element signature="e#450#465#0" expanded="true" />
             <element signature="e#1060#1064#0" expanded="false" />
             <element signature="e#1671#1699#0" expanded="false" />
             <element signature="e#1767#1797#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18478261" vertical-offset="0" max-vertical-offset="920">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="e#694#703#0" expanded="true" />
+            <marker date="1415679021722" expanded="true" signature="429:451" placeholder="SELECT * fro..CREATURE..." />
           </folding>
         </state>
       </provider>
