@@ -78,13 +78,13 @@ class Creature:
         my_dict.__setitem__('cha', self.attributes.get('CHA'))
         my_dict.__setitem__('senses', self.senses)
         my_dict.__setitem__('languages', self.languages)
-        my_dict.__setitem__('challenge', self.name)
+        my_dict.__setitem__('challenge', self.challenge)
 
         # Only handles 1 attack atm.
-        my_dict.__setitem__('attack', self.name)
-        my_dict.__setitem__('attackDescription', self.name)
-        my_dict.__setitem__('attackHit', self.name)
-        my_dict.__setitem__('attackDamage', self.name)
+        my_dict.__setitem__('attack', self.actionSet[0]['Name'])
+        my_dict.__setitem__('attackDescription', self.actionSet[0]['Description'])
+        my_dict.__setitem__('attackHit', self.actionSet[0]['Attack'])
+        my_dict.__setitem__('attackDamage', self.actionSet[0]['Hit'])
 
         return my_dict
 
