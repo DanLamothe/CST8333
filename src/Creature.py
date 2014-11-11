@@ -1,15 +1,16 @@
 __author__ = 'User'
 
-'''
-    Name: Creature.py
-    By: Daniel Lamothe
-    Last Modified: 2014-10-19
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# File Name: Creature.py
+# By: Daniel Lamothe
+#
+# Purpose: A Python class that representing a collection of information and statistics representing a creature in a
+#          fantasy RPG.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Purpose: A Python class that representing a collection of information and statistics representing a creature in a
-            fantasy RPG.
-'''
 import Database
 from string import Template
+
 
 class Creature:
     # Data Members
@@ -49,6 +50,7 @@ class Creature:
         self.languages = languages
         self.challenge = challenge
         self.actionSet = actionSet
+        # need Action
 
     def save(self):
         Database.Database.save(self)
