@@ -24,6 +24,7 @@ class Database:
         print(e)
         pass
 
+    @staticmethod
     def save(self, creature):
         try:
             db = sqlite3.connect('db\cst8333.db')
@@ -96,6 +97,7 @@ class Database:
     def update(self, creature):
         pass
 
+    @staticmethod
     def delete(self, creature):
         try:
             db = sqlite3.connect('db\cst8333.db')
@@ -103,7 +105,7 @@ class Database:
 
             cursor = db.cursor()
 
-            # Turns on Foriegn Key Constraint for cascade delete
+            # Turns on Foreign Key Constraint for cascade delete
             cursor.execute('PRAGMA foreign_keys = ON;')
 
             var = str.format('''
@@ -111,7 +113,6 @@ class Database:
             ''', creature.name)
 
             cursor.execute(var)
-
             db.commit()
             print("Changes saved.")
 
