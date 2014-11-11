@@ -9,7 +9,7 @@ __author__ = 'User'
             fantasy RPG.
 '''
 import Database
-
+from string import Template
 
 class Creature:
     # Data Members
@@ -85,3 +85,27 @@ class Creature:
         my_dict.__setitem__('attackDamage', self.name)
 
         return my_dict
+
+    @staticmethod
+    def export(my_dict):
+        try:
+            # Open the template'
+            file_in = open(r'templates\BasicCreatureBlock.html', 'r')
+
+            # Read the statblock
+            src = Template(file_in.read())
+
+            # Create a destination file
+            file_name = str.format('{}_StatBlock.html', my_dict.get('name').strip())
+            file_out = open(file_name, 'w')
+
+            # Make the substitutions
+            file_out.write(src.substitute(my_dict))
+        except Exception as e:
+            print(e)
+        finally:
+            # Free resources by closing the destination file. Will be found in the src folder. Can open in browser.
+            file_out.close()
+            print('{}_StatBlock.html created!', my_dict.get('name').strip())
+            # close the template
+            file_in.close()
