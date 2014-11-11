@@ -45,7 +45,7 @@ class Creature:
         self.hp = hp
         self.speed = speed
         self.attributes = attributes
-        self.senses = senses
+        self.senses = '{0}, {1}, {2}'.format(senses['DarkVision'], senses['TremorSense'], senses['BlindSense'])
         self.languages = languages
         self.challenge = challenge
         self.actionSet = actionSet
@@ -58,3 +58,30 @@ class Creature:
 
     def delete(self):
         Database.Database.delete(self)
+
+    def to_dict(self):
+        my_dict = {}
+        my_dict.__setitem__('name', self.name)
+        my_dict.__setitem__('type', self.type)
+        my_dict.__setitem__('size', self.size)
+        my_dict.__setitem__('alignment', self.alignment)
+        my_dict.__setitem__('ac', self.ac)
+        my_dict.__setitem__('hp', self.hp)
+        my_dict.__setitem__('speed', self.speed)
+        my_dict.__setitem__('str', self.attributes.get('STR'))
+        my_dict.__setitem__('dex', self.attributes.get('DEX'))
+        my_dict.__setitem__('con', self.attributes.get('CON'))
+        my_dict.__setitem__('int', self.attributes.get('INT'))
+        my_dict.__setitem__('wis', self.attributes.get('WIS'))
+        my_dict.__setitem__('cha', self.attributes.get('CHA'))
+        my_dict.__setitem__('senses', self.senses)
+        my_dict.__setitem__('languages', self.languages)
+        my_dict.__setitem__('challenge', self.name)
+
+        # Only handles 1 attack atm.
+        my_dict.__setitem__('attack', self.name)
+        my_dict.__setitem__('attackDescription', self.name)
+        my_dict.__setitem__('attackHit', self.name)
+        my_dict.__setitem__('attackDamage', self.name)
+
+        return my_dict
