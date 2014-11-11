@@ -2,7 +2,7 @@
 # File Name: __init__.py
 # By: Daniel Lamothe
 #
-# Purpose: CST8333 Demo for Assignment 1. Creates and populates the database with a sample creature. Reads the database
+# Purpose: CST8333 Demo for Assignment 3. Creates and populates the database with a sample creature. Reads the database
 #   and stores the values in a Dictionary object. Using the Dictionary object and the Template module, the script
 #   substitutes values in the dictionary into the supplied HTML template. A new file is created depicting the creature
 #   in statistical form.
