@@ -29,9 +29,33 @@ os.system(r'python db\select_db.py')
 print('\nTASK1 - Database successfully set up!\n')
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# TASK 2: Retrieve the stats for the stored Dire TunaFish creature
+# TASK 2: UI
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-my_creature = Database.Database.read('Dire TunaFish')
-my_creature.export(my_creature.to_dict())
+menu = {'0': "Exit", '1': "Create Creature", '2': "Export Creature"}
+
+while True:
+    options = menu.keys()
+
+    print('Welcome to the Fantasy Creature Statblock Creator')
+    print('Please enter a selection from the options below: ')
+    print('-------------------------------------------------')
+    print('(0) Exit')
+    print('(1) Create')
+    print('(2) Export Statblock')
+    selection = input("\nPlease Select:")
+
+    if selection == '0':
+        print('\nGoodbye!')
+        exit()
+
+    elif selection == '1':
+        pass
+
+    elif selection == '2':
+        menu_creature = Database.Database.read('Dire TunaFish')
+        menu_creature.export(menu_creature.to_dict())
+
+    else:
+        print('Unknown option selected. Please try again.')
 

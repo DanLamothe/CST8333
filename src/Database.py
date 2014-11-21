@@ -4,7 +4,7 @@ __author__ = 'User'
 # File Name: Database.py
 # By: Daniel Lamothe
 #
-# Purpose: CST8333 Demo for Assignment 4. Creates a database object which will handle the connection to the sqlite3
+# Purpose: CST8333 Demo for Assignment 04. Creates a database object which will handle the connection to the sqlite3
 # database file and all data manipulations for a current session. Ensures any resources are closed when task is done.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -204,7 +204,7 @@ class Database:
 
                 # Add the Dictionary to the List ¯\_(ツ)_/¯
                 action_set.append(action)
-            my_creature = Creature(name, size, type, alignment, ac, hp, speed, attributes, senses, languages,
+            my_creature = Creature.Creature(name, size, type, alignment, ac, hp, speed, attributes, senses, languages,
                                    challenge_rating, action_set)
         except Exception as e:
             print(e)
@@ -212,8 +212,4 @@ class Database:
         finally:
             db.close()
 
-        if my_creature is object:
-            return my_creature
-        else:
-            print('Failure to create Creature in memory... \n Terminating...')
-            exit()
+        return my_creature
