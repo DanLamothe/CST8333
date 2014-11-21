@@ -51,7 +51,7 @@ while True:
         exit()
 
     elif selection == '1':
-        pass
+        CreateCreature.promptCreate()
 
     elif selection == '2':
         menu_creature = Database.Database.read('Dire TunaFish')
