@@ -12,7 +12,7 @@ __author__ = 'User'
 
 import os
 import Database
-import Creature
+import CreateCreature
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # TASK 1: Setup the Database
@@ -50,8 +50,9 @@ while True:
         print('\nGoodbye!')
         exit()
 
+    # Creates a Creature Object through Prompts, saves the completed Creature into the database
     elif selection == '1':
-        CreateCreature.promptCreate()
+        Database.Database.save(CreateCreature.prompt_create())
 
     elif selection == '2':
         menu_creature = Database.Database.read('Dire TunaFish')

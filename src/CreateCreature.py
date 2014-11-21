@@ -11,6 +11,7 @@ def prompt_create(self):
     action_set = []
 
     print('You will be prompted for values representing a creature. Press X to exit at any time')
+    # allows quitting early
     while selection != 'x':
             selection = input('Name:')
             name = selection
@@ -88,4 +89,8 @@ def prompt_create(self):
 
             assert isinstance(created_creature, Creature)
             selection = 'x'
-    return created_creature
+    try:
+        return created_creature
+    except Exception as e:
+        print('Creature Creation stopped before completion.')
+        print(e)
