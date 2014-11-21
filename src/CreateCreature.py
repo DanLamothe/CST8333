@@ -4,7 +4,7 @@ import Action
 import Creature
 
 
-def prompt_create(self):
+def prompt_create():
     selection = ''
     attributes = {}
     senses = {}
@@ -80,14 +80,15 @@ def prompt_create(self):
             selection = input('Attack Damage:')
             action_hit = selection
 
-            creature_action = Action(action_name, action_desc, action_attack, action_hit)
-            assert isinstance(creature_action, Action)
+            creature_action = Action.Action(action_name, action_desc, action_attack, action_hit)
+            assert isinstance(creature_action, Action.Action)
+
             action_set.append(creature_action)
 
             # Create the Creature
-            created_creature = Creature(name, size, specification, alignment, ac, hp, speed, attributes, senses, languages, challenge_rating, action_set)
+            created_creature = Creature.Creature(name, size, specification, alignment, ac, hp, speed, attributes, senses, languages, challenge_rating, action_set)
 
-            assert isinstance(created_creature, Creature)
+            assert isinstance(created_creature, Creature.Creature)
             selection = 'x'
     try:
         return created_creature

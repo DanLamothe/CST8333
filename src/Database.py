@@ -85,6 +85,7 @@ class Database:
 
         except Exception as e:
             print(e)
+            print(e.l)
             db.rollback()
         else:
             print("Unknown Error... Exiting")
