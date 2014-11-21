@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8bf2843-16b8-4328-962b-c0a4ff1bfc38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/cst8333.db" afterPath="$PROJECT_DIR$/src/db/cst8333.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Action.py" afterPath="$PROJECT_DIR$/src/Action.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CreateCreature.py" afterPath="$PROJECT_DIR$/src/CreateCreature.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database.py" afterPath="$PROJECT_DIR$/src/Database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/__init__.py" afterPath="$PROJECT_DIR$/src/__init__.py" />
-    </list>
+    <list default="true" id="f8bf2843-16b8-4328-962b-c0a4ff1bfc38" name="Default" comment="" />
     <ignored path="CST8333.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
