@@ -11,23 +11,23 @@ import sqlite3
 
 
 def select_creature():
-    db = sqlite3.connect('db\cst8333.db')
+    db = sqlite3.connect('cst8333.db')
     print("Opened database successfully.")
 
-    cursor = db.execute("SELECT id, name, hp from CREATURE")
-
+    cursor = db.execute("SELECT * from CREATURE")
     for row in cursor:
-        print("ID =", row[0])
-        print("Name =", row[1])
-        print("HP =", row[2])
-        print("\n")
+        print(row)
+     #   print("ID =", row[0])
+      #  print("Name =", row[1])
+       # print("HP =", row[2])
+        #print("\n")
 
     print("Operation performed successfully.")
     db.close()
 
 
 def select_attributes():
-    db = sqlite3.connect('db\cst8333.db')
+    db = sqlite3.connect('cst8333.db')
     print("Opened database successfully.")
 
     cursor = db.execute("SELECT * from ATTRIBUTES")
@@ -47,7 +47,7 @@ def select_attributes():
 
 
 def select_senses():
-    db = sqlite3.connect('db\cst8333.db')
+    db = sqlite3.connect('cst8333.db')
     print("Opened database successfully.")
 
     cursor = db.execute("SELECT * from SENSES")
@@ -62,7 +62,7 @@ def select_senses():
 
 
 def select_actions():
-    db = sqlite3.connect('db\cst8333.db')
+    db = sqlite3.connect('cst8333.db')
     print("Opened database successfully.")
 
     cursor = db.execute("SELECT * from ACTIONS")

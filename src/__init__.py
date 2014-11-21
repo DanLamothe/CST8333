@@ -12,6 +12,7 @@ __author__ = 'User'
 
 import os
 import Database
+import Creature
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # TASK 1: Setup the Database
@@ -24,7 +25,7 @@ os.system(r'python db\create_db.py')
 os.system(r'python db\insert_db.py')
 
 # Select the records to show they are indeed there
-os.system(r'python db\select_db.py')
+# os.system(r'python db\select_db.py')
 
 print('\nTASK1 - Database successfully set up!\n')
 
