@@ -46,11 +46,13 @@ class Creature:
         self.hp = hp
         self.speed = speed
         self.attributes = attributes
-        self.senses = '{0}, {1}, {2}'.format(senses['DarkVision'], senses['TremorSense'], senses['BlindSense'])
+
+        self.senses = senses
         self.languages = languages
         self.challenge = challenge
         self.actionSet = actionSet
-        # need Action
+
+        # need Action (Created Elsewhere, already attached in actionSet)
 
     def save(self):
         Database.Database.save(self)

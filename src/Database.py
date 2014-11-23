@@ -32,54 +32,39 @@ class Database:
             # Loops through the list of action dictionaries and persists them
             rowid_action_list = []
             for action in creature.actionSet:
-                insert_action = str.format('''
-                    INSERT INTO ACTIONS (name, description, attack, hit)
-                    VALUES (?, ?, ?, ?, ?)
-                ''', (action.name, action.description, action.attack, action.hit))
-                cursor.execute(insert_action)
+                cursor.execute('INSERT INTO ACTIONS (name, description, attack, hit) VALUES (?, ?, ?, ?)',
+                               (action.name, action.desc, action.attack, action.hit))
                 rowid_action_list.append(cursor.lastrowid)
 
             # Loops and registers each action record to an action_collection
             for integer in rowid_action_list:
-                insert_action_collection = str.format(format('''
-                INSERT INTO ACTION_COLLECTION (action_ref)
-                VALUES (?)
-                ''', integer))
-                cursor.execute(insert_action_collection)
-
+                cursor.execute('INSERT INTO ACTION_COLLECTION (action_ref) VALUES (?)', (integer,))
             rowid_action_collection = cursor.lastrowid
 
             # Inserts records for Sense tablecreate_senses
-            insert_senses = str.format('''
-                INSERT INTO SENSES (darkvision, tremorsense, blindsense)
-                VALUES (?, ?, ?)
-            ''', (creature.senses.get('DarkVision'), creature.senses.get('TremorSense'), creature.senses.get('BlindSense')))
-            db.execute(insert_senses)
+            db.execute('INSERT INTO SENSES (darkvision, tremorsense, blindsense) VALUES (?, ?, ?)',
+                       (creature.senses.get('DarkVision'), creature.senses.get('TremorSense'),
+                        creature.senses.get('BlindSense')))
             rowid_sense = cursor.lastrowid
 
             # Inserts records for Attributes table
-            insert_attributes = str.format('''
-                INSERT INTO ATTRIBUTES (strength, dexterity, constitution, intelligence, wisdom, charisma)
-                VALUES (?, ?, ?, ?, ?, ?)
-            ''',
-                                           (creature.attributes.get('STR')),
-                                           (creature.attributes.get('DEX')),
-                                           (creature.attributes.get('CON')),
-                                           (creature.attributes.get('INT')),
-                                           (creature.attributes.get('WIS')),
-                                           (creature.attributes.get('CHA'))
-            )
-            db.execute(insert_attributes)
+            db.execute('''INSERT INTO ATTRIBUTES (strength, dexterity, constitution, intelligence, wisdom, charisma)
+                VALUES(?, ?, ?, ?, ?, ?)''',
+                       (creature.attributes.get('STR'),
+                        creature.attributes.get('DEX'),
+                        creature.attributes.get('CON'),
+                        creature.attributes.get('INT'),
+                        creature.attributes.get('WIS'),
+                        creature.attributes.get('CHA')))
             rowid_attributes = cursor.lastrowid
 
             # Inserts the creature object into the Creature table
-            insert_creature = str.format('''
+            db.execute('''
               INSERT INTO CREATURE (name, size, type, alignment, ac, hp, speed, attribute_ref, senses_ref, languages,
-                challenge_rating, actions_ref) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', (creature.name, creature.size, creature.type, creature.ac, creature.hp, creature.speed,
-                  rowid_attributes, rowid_sense, creature.languages, creature.challenge, rowid_action_collection))
-            db.execute(insert_creature)
-
+              challenge_rating, action_collection_ref) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+              ''', (creature.name, creature.size, creature.type, creature.alignment, creature.ac, creature.hp,
+                    creature.speed, rowid_attributes, rowid_sense, creature.languages, creature.challenge,
+                    rowid_action_collection))
             db.commit()
             print("Changes saved.")
 
@@ -87,9 +72,9 @@ class Database:
             print(e)
             print(e.l)
             db.rollback()
-        else:
-            print("Unknown Error... Exiting")
-            db.rollback()
+#        else:
+#            print("Unknown Error... Exiting")
+#            db.rollback()
         finally:
             db.close()
 
