@@ -21,9 +21,22 @@ class Database:
     # Default Constructor
     def __init__(self):
         pass
+
     def handle_exception(e):
         print(e)
         pass
+
+    @staticmethod
+    def print_all_creatures(is_test):
+        if is_test:
+            db = sqlite3.connect('..\src\db\cst8333.db')
+        else:
+            db = sqlite3.connect('db\cst8333.db')
+            print("Opened database successfully.")
+        cursor = db.execute("SELECT * from CREATURE")
+        for row in cursor:
+            print(row)
+        db.close()
 
     @staticmethod
     def save(creature, is_test):
@@ -83,7 +96,27 @@ class Database:
 
     @staticmethod
     def update(creature, is_test):
-        pass
+        try:
+            if is_test:
+                db = sqlite3.connect('..\src\db\cst8333.db')
+            else:
+                db = sqlite3.connect('db\cst8333.db')
+            print("Opened database successfully.")
+
+            cursor = db.cursor()
+
+            # Turns on Foreign Key Constraint for cascade delete
+            cursor.execute('PRAGMA foreign_keys = ON;')
+            cursor.execute('DELETE FROM CREATURE WHERE CREATURE.name = ?', (creature_name,))
+
+            db.commit()
+            print("Changes saved.")
+
+        except Exception as e:
+            print(e)
+            db.rollback()
+        finally:
+            db.close()
 
     @staticmethod
     def delete(creature_name, is_test):

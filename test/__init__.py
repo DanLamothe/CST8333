@@ -36,13 +36,7 @@ def test_creature_create():
 
 
 def test_creature_select():
-    db = sqlite3.connect('..\src\db\cst8333.db')
-    print("Opened database successfully.")
-    cursor = db.execute("SELECT * from CREATURE")
-    for row in cursor:
-        print(row)
-    print("Operation performed successfully.")
-    db.close()
+    Database.Database.print_all_creatures(True)
 
 
 def test_creature_delete():
