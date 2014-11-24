@@ -10,6 +10,7 @@ __author__ = 'User'
 
 import Database
 from string import Template
+import Action
 
 
 class Creature:
@@ -61,7 +62,44 @@ class Creature:
             Database.Database.save(self, False)
 
     def update(self, is_test):
-        pass
+        user_choice = input('\nAlter Creature MetaData? (Y/N)')
+        original_name = self.name
+        if user_choice == 'Y' or 'y':
+            self.name = input('Name: ')
+            self.size = input('Size: ')
+            self.type = input('Specifications ')
+            self.alignment = input('Alignment: ')
+            self.ac = input('Armor Class (int): ')
+            self.hp = input('Hit Points: ')
+            self.speed = input('Speed(s): ')
+            self.languages = input('Known Language(s): ')
+            self.challenge = input('Challenge Rating: ')
+
+        user_choice = input('\nAlter Creature Attribute Scores? (Y/N)')
+        if user_choice == 'Y' or 'y':
+            self.attributes.__setitem__('STR', int(input('Strength (int): ')))
+            self.attributes.__setitem__('DEX', int(input('Dexterity (int): ')))
+            self.attributes.__setitem__('CON', int(input('Constitution (int): ')))
+            self.attributes.__setitem__('INT', int(input('Intelligence (int): ')))
+            self.attributes.__setitem__('WIS', int(input('Wisdom (int): ')))
+            self.attributes.__setitem__('CHA', int(input('Charisma (int): ')))
+
+        user_choice = input('\nAlter Creature Senses? (Y/N)')
+        if user_choice == 'Y' or 'y':
+            self.senses.__setitem__('DarkVision', input('DarkVision (Nullable): '))
+            self.senses.__setitem__('BlindSense', input('BlindSense (Nullable): '))
+            self.senses.__setitem__('TremorSense', input('TremorSense (Nullable): '))
+
+        user_choice = input('\nAlter Creature Action? (Y/N)')
+        if user_choice == 'Y' or 'y':
+            a_name = input('Action Name: ')
+            a_desc = input('Action Description: ')
+            a_attack = input('Modifiers to Hit: ')
+            a_hit = input('Damage on Hit: ')
+            self.actionSet[0] = Action.Action(a_name, a_desc, a_attack, a_hit)
+
+        print('Attempting Update...')
+        Database.Database.update(self, original_name, is_test)
 
     def delete(self, is_test):
         if is_test:

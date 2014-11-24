@@ -1,19 +1,18 @@
 __author__ = 'User'
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # File Name: Database.py
 # By: Daniel Lamothe
 #
 # Purpose: CST8333 Demo for Assignment 04. Creates a database object which will handle the connection to the sqlite3
 # database file and all data manipulations for a current session. Ensures any resources are closed when task is done.
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 import sqlite3
 import Creature
 
 
 class Database:
-
     # These Module Variables are used to differentiate between testing and production db access
     project_db_location = 'db\cst8333.db'
     test_db_location = '..\src\db\cst8333.db'
@@ -33,7 +32,7 @@ class Database:
         else:
             db = sqlite3.connect('db\cst8333.db')
             print("Opened database successfully.")
-        cursor = db.execute("SELECT * from CREATURE")
+        cursor = db.execute("SELECT * FROM CREATURE")
         for row in cursor:
             print(row)
         db.close()
@@ -95,24 +94,61 @@ class Database:
             db.close()
 
     @staticmethod
-    def update(creature, is_test):
+    def update(creature, original_name, is_test):
         try:
             if is_test:
                 db = sqlite3.connect('..\src\db\cst8333.db')
             else:
                 db = sqlite3.connect('db\cst8333.db')
             print("Opened database successfully.")
-
             cursor = db.cursor()
 
-            # Turns on Foreign Key Constraint for cascade delete
-            cursor.execute('PRAGMA foreign_keys = ON;')
-            cursor.execute('DELETE FROM CREATURE WHERE CREATURE.name = ?', (creature_name,))
+            # Retrieve Foreign Keys
+            cursor.execute('SELECT action_collection_ref FROM CREATURE WHERE CREATURE.name = ?', (original_name,))
+            u_action_collection_ref = cursor.fetchone()
+
+            cursor.execute('SELECT action_ref FROM ACTION_COLLECTION WHERE id = ?', (u_action_collection_ref,))
+            u_action_ref = cursor.fetchone()
+
+            cursor.execute('SELECT senses_ref FROM CREATURE WHERE CREATURE.name = ?', (original_name,))
+            u_senses_ref = cursor.fetchone()
+
+            cursor.execute('SELECT attribute_ref FROM CREATURE WHERE CREATURE.name = ?', (original_name,))
+            u_attribute_ref = cursor.fetchone()
+
+            # Update Creature Table
+            cursor.execute(
+                '''UPDATE CREATURE SET name = ?, size = ?, type = ?, alignment = ?, ac = ?, hp = ?, speed = ?, languages = ?, challenge_rating = ? WHERE CREATURE.name = ?''',
+                (creature.name, creature.size, creature.type,
+                 creature.alignment, creature.ac, creature.hp, creature.speed,
+                 creature.languages, creature.challenge, original_name))
+
+            # Update Senses Table
+            cursor.execute('''UPDATE SENSES SET darkvision = ?, tremorsense = ?, blindsense = ? WHERE id = ?''', (
+                creature.senses.get('DarkVision'), creature.senses.get('TremorSense'),
+                creature.senses.get('BlindSense'),
+                u_senses_ref))
+
+            # Update Attribute Table
+            cursor.execute(
+                '''UPDATE ATTRIBUTES SET strength = ?, dexterity = ?, constitution = ?, intelligence = ?, wisdom = ?, charisma = ? WHERE id = ?''',
+                (
+                    creature.get('STR'), creature.get('DEX'), creature.get('CON'), creature.get('INT'),
+                    creature.get('WIS'),
+                    creature.get('CHA'), u_attribute_ref))
+
+            # Update Action Table
+            cursor.execute(
+                '''UPDATE ACTIONS SET name = ?, description = ?, attack = ?, hit = ? WHERE id = ?''', (
+                creature.actionSet[0].name, creature.actionSet[0].desc, creature.actionSet[0].attack,
+                creature.actionSet[0].hit, u_action_ref)
+            )
 
             db.commit()
             print("Changes saved.")
 
         except Exception as e:
+            print('***The Following Exception Occurred: ')
             print(e)
             db.rollback()
         finally:
@@ -217,7 +253,7 @@ class Database:
                 # Add the Dictionary to the List ¯\_(ツ)_/¯
                 action_set.append(action)
             this_creature = Creature.Creature(name, size, specification, alignment, ac, hp, speed, attributes,
-                                 senses, languages, challenge_rating, action_set)
+                                              senses, languages, challenge_rating, action_set)
         except Exception as e:
             print('*** The Following Exception Occurred:')
             print(e)
