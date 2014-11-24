@@ -47,7 +47,7 @@ def test_creature_select():
 
 def test_creature_delete():
     creature_name = input('Name of Creature to Delete:')
-    Database.Database.delete(creature_name, 1)
+    Database.Database.delete(creature_name, True)
 # Creature Creation Test Code (Uncomment to test)
 # test_creature_create()
 

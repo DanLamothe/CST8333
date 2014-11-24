@@ -81,7 +81,7 @@ class Database:
         finally:
             db.close()
 
-    def update(creature):
+    def update(creature, is_test):
         pass
 
     @staticmethod
