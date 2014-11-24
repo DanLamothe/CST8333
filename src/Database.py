@@ -81,6 +81,7 @@ class Database:
         finally:
             db.close()
 
+    @staticmethod
     def update(creature, is_test):
         pass
 
@@ -118,14 +119,12 @@ class Database:
             cursor = db.cursor()
             print('*** Cursor set')
 
-            #var = str.format('SELECT * FROM CREATURE WHERE name = ?', (creature_name,))
-            #print('*** Formatted string')
-
             cursor.execute('SELECT * FROM CREATURE WHERE name = ?', (creature_name,))
             print('***Execute SELECT')
 
-            # from the Creature Table, grabs first identical record
-            for row in cursor.fetchone():
+            # from the Creature Table, *** Might throw an error if more than 1 creature_name is selected...
+            for row in cursor:
+                print(row)
                 name = row[1]
                 size = row[2]
                 specification = row[3]
@@ -138,57 +137,45 @@ class Database:
                 languages = row[10]
                 challenge_rating = row[11]
                 action_collection_ref = row[12]
-            print('Select Statement done')
 
             # from the Attributes Table
-#            var = str.format('''
-#               SELECT * FROM ATTRIBUTES WHERE ATTRIBUTES.ID = ?
-#            ''', (attribute_ref,))
             cursor.execute('SELECT * FROM ATTRIBUTES WHERE ATTRIBUTES.ID = ?', (attribute_ref,))
-
             attributes = {}
-            for row in cursor.fetchone():
-                attributes.__setitem__('STR', row[1])
-                attributes.__setitem__('DEX', row[2])
-                attributes.__setitem__('CON', row[3])
-                attributes.__setitem__('INT', row[4])
-                attributes.__setitem__('WIS', row[5])
-                attributes.__setitem__('CHA', row[6])
+            for row in cursor:
+                print(row)
+                attributes.__setitem__('STR', str(row[1]))
+                attributes.__setitem__('DEX', str(row[2]))
+                attributes.__setitem__('CON', str(row[3]))
+                attributes.__setitem__('INT', str(row[4]))
+                attributes.__setitem__('WIS', str(row[5]))
+                attributes.__setitem__('CHA', str(row[6]))
 
             # from the Senses Table
-#            var = str.format('''
-#                SELECT * FROM SENSES WHERE SENSES.ID = ?
-#            ''', (senses_ref,))
             cursor.execute('SELECT * FROM SENSES WHERE SENSES.ID = ?', (senses_ref,))
-
             senses = {}
-            for row in cursor.fetchone():
+            for row in cursor:
+                print(row)
                 senses.__setitem__('DarkVision', row[1])
                 senses.__setitem__('TremorSense', row[2])
                 senses.__setitem__('BlindSense', row[3])
+                print(senses.get('TremorSense'))
 
             # from the Action Collection Table
-#            var = str.format('''
-#                SELECT * FROM ACTION_COLLECTION WHERE ACTION_COLLECTION.ID = ?
-#            ''', (action_collection_ref,))
             cursor.execute('SELECT * FROM ACTION_COLLECTION WHERE ACTION_COLLECTION.ID = ?', (action_collection_ref,))
 
             action_collection = []
-            i = 0
-            for row in cursor.fetchone():
-                action_collection.append(row[i])
-                i += 1
+            for row in cursor:
+                print(row)
+                action_collection.append(row[1])
 
             # Retrieving the actions
             action_set = []
             for fk in action_collection:
-#               var = str.format('''
-#                    SELECT * FROM ACTIONS WHERE ACTIONS.ID = ?
-#               ''', (fk,))
-                cursor.execute('SELECT * FROM ACTIONS WHERE ACTIONS.ID = ?', (fk,))
+                cursor.execute('SELECT * FROM ACTIONS WHERE ACTIONS.ID = ?', (str(fk),))
 
                 action = {}
-                for row in cursor.fetchone():
+                for row in cursor:
+                    print(row)
                     action.__setitem__('Name', row[1])
                     action.__setitem__('Description', row[2])
                     action.__setitem__('Attack', row[3])
@@ -196,12 +183,13 @@ class Database:
 
                 # Add the Dictionary to the List ¯\_(ツ)_/¯
                 action_set.append(action)
-#            my_creature = Creature.Creature(name, size, type, alignment, ac, hp, speed, attributes, senses, languages,
-#                                  challenge_rating, action_set)
+            this_creature = Creature.Creature(name, size, specification, alignment, ac, hp, speed, attributes,
+                                 senses, languages, challenge_rating, action_set)
         except Exception as e:
+            print('*** The Following Exception Occurred:')
             print(e)
             db.rollback()
         finally:
             db.close()
 
-        return Creature.Creature(name, size, specification, alignment, ac, hp, speed, attributes, senses, languages, challenge_rating, action_set)
+        return this_creature

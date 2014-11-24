@@ -96,6 +96,9 @@ class Creature:
 
         return my_dict
 
+    def to_string(self):
+        print(str(self))
+
     @staticmethod
     def export(my_dict):
         try:

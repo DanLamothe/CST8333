@@ -48,12 +48,23 @@ def test_creature_select():
 def test_creature_delete():
     creature_name = input('Name of Creature to Delete:')
     Database.Database.delete(creature_name, True)
+
+
+def test_creature_read():
+    creature_name = input('Name of Creature to load into memory:')
+
+    print(Database.Database.read(creature_name, True).name)
+
 # Creature Creation Test Code (Uncomment to test)
 # test_creature_create()
 
 # Creature SELECT Test Code (Uncomment to test)
-test_creature_select()
+#test_creature_select()
 
-# Creature DELETE Test Code
-test_creature_delete()
+# Creature DELETE Test Code (Uncomment to test)
+#test_creature_delete()
+#test_creature_select()
+
+# Creature Read Test Code (Uncomment to test)
 test_creature_select()
+test_creature_read()
