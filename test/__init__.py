@@ -52,8 +52,14 @@ def test_creature_delete():
 
 def test_creature_read():
     creature_name = input('Name of Creature to load into memory:')
+    read_creature = Database.Database.read(creature_name, True)
+    print(read_creature.name)
+    return read_creature
 
-    print(Database.Database.read(creature_name, True).name)
+
+def test_creature_export():
+    creature = test_creature_read()
+    creature.export(creature.to_dict(), True)
 
 # Creature Creation Test Code (Uncomment to test)
 # test_creature_create()
@@ -66,5 +72,9 @@ def test_creature_read():
 #test_creature_select()
 
 # Creature Read Test Code (Uncomment to test)
+#test_creature_select()
+#test_creature_read()
+
+# Creature Export Test Code (Uncomment to Test)
 test_creature_select()
-test_creature_read()
+test_creature_export()

@@ -100,10 +100,13 @@ class Creature:
         print(str(self))
 
     @staticmethod
-    def export(my_dict):
+    def export(my_dict, is_test):
         try:
             # Open the template'
-            file_in = open(r'templates\BasicCreatureBlock.html', 'r')
+            if is_test:
+                file_in = open(r'..\src\templates\BasicCreatureBlock.html', 'r')
+            else:
+                file_in = open(r'templates\BasicCreatureBlock.html', 'r')
 
             # Read the statblock
             src = Template(file_in.read())
