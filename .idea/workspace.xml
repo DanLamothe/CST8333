@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8bf2843-16b8-4328-962b-c0a4ff1bfc38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/cst8333.db" afterPath="$PROJECT_DIR$/src/db/cst8333.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CreateCreature.py" afterPath="$PROJECT_DIR$/src/CreateCreature.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Creature.py" afterPath="$PROJECT_DIR$/src/Creature.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database.py" afterPath="$PROJECT_DIR$/src/Database.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/__init__.py" afterPath="$PROJECT_DIR$/src/__init__.py" />
@@ -24,7 +22,7 @@
     <SUITE FILE_PATH="coverage/CST8333$insert_db.coverage" NAME="insert_db Coverage Results" MODIFIED="1413857234690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/db" />
     <SUITE FILE_PATH="coverage/CST8333$Database.coverage" NAME="Database Coverage Results" MODIFIED="1416585227868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/CST8333$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1416581794759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CST8333$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1416785869728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/CST8333$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1416787585929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/CST8333$create_db.coverage" NAME="create_db Coverage Results" MODIFIED="1413857472411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/db" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -39,13 +37,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create_db.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/db/create_db.py">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="910" max-vertical-offset="1683">
-              <caret line="85" column="40" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
-                <marker date="1415670302753" expanded="true" signature="1258:1407" placeholder="CREATE TABLE..ACTIONS..." />
+                <element signature="e#22#37#0" expanded="true" />
+                <marker date="1416788182905" expanded="true" signature="1248:1270" placeholder="SELECT * fro..CREATURE..." />
               </folding>
             </state>
           </provider>
@@ -54,9 +53,21 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1139">
-              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1139">
+              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_db.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/db/create_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="910" max-vertical-offset="1683">
+              <caret line="85" column="40" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="40" />
+              <folding>
+                <marker date="1415670302753" expanded="true" signature="1258:1407" placeholder="CREATE TABLE..ACTIONS..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +85,7 @@
       <file leaf-file-name="CreateCreature.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CreateCreature.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2091">
+            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2091">
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#21#34#0" expanded="true" />
@@ -83,33 +94,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Database.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="3570">
-              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+            <state vertical-scroll-proportion="2.1147542" vertical-offset="468" max-vertical-offset="3587">
+              <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
               <folding>
-                <marker date="1416785385470" expanded="true" signature="1100:1152" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1100:1444" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1100:1260" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1100:1172" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1102:1172" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1476:1518" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1476:1600" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1476:1529" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1683:1739" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1683:2008" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="1683:1756" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="2035:2125" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="2035:2166" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="2664:2866" placeholder="INSERT INTO ..." />
-                <marker date="1416785385470" expanded="true" signature="3755:3779" placeholder="PRAGMA forei..." />
-                <marker date="1416785385470" expanded="true" signature="3833:3877" placeholder="DELETE FROM ..." />
-                <marker date="1416785385470" expanded="true" signature="4601:4638" placeholder="SELECT * FRO..CREATURE..." />
-                <marker date="1416785385470" expanded="true" signature="5479:5527" placeholder="SELECT * FRO..ATTRIBUTES..." />
-                <marker date="1416785385470" expanded="true" signature="6133:6173" placeholder="SELECT * FRO..SENSES..." />
-                <marker date="1416785385470" expanded="true" signature="6664:6726" placeholder="SELECT * FRO..ACTION_COLLECTION..." />
-                <marker date="1416785385470" expanded="true" signature="7191:7233" placeholder="SELECT * FRO..ACTIONS..." />
+                <marker date="1416788580478" expanded="true" signature="1400:1452" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1400:1744" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1400:1560" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1400:1472" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1400:1472" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1402:1472" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1776:1818" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1776:1900" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1776:1829" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1983:2039" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1983:2308" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="1983:2056" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="2335:2425" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="2335:2466" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="2964:3166" placeholder="INSERT INTO ..." />
+                <marker date="1416788580478" expanded="true" signature="4081:4105" placeholder="PRAGMA forei..." />
+                <marker date="1416788580478" expanded="true" signature="4137:5635" placeholder="DELETE FROM ..." />
+                <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+                <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+                <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+                <marker date="1416788580478" expanded="true" signature="4890:4927" placeholder="SELECT * FRO..CREATURE..." />
+                <marker date="1416788580478" expanded="true" signature="5768:5816" placeholder="SELECT * FRO..ATTRIBUTES..." />
+                <marker date="1416788580478" expanded="true" signature="6422:6462" placeholder="SELECT * FRO..SENSES..." />
+                <marker date="1416788580478" expanded="true" signature="6953:7015" placeholder="SELECT * FRO..ACTION_COLLECTION..." />
+                <marker date="1416788580478" expanded="true" signature="7480:7522" placeholder="SELECT * FRO..ACTIONS..." />
               </folding>
             </state>
           </provider>
@@ -118,11 +133,11 @@
       <file leaf-file-name="Creature.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Creature.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="349" max-vertical-offset="1258">
-              <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="689" max-vertical-offset="1360">
+              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
               <folding>
-                <element signature="e#1800#3038#0" expanded="false" />
-                <element signature="e#3091#3887#0" expanded="false" />
+                <element signature="e#2023#3261#0" expanded="false" />
+                <element signature="e#3314#4110#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -138,19 +153,6 @@
                 <marker date="1416584865527" expanded="true" signature="911:935" placeholder="SELECT * fro..ATTRIBUTES..." />
                 <marker date="1416584865527" expanded="true" signature="1392:1412" placeholder="SELECT * fro..SENSES..." />
                 <marker date="1416584865527" expanded="true" signature="1718:1739" placeholder="SELECT * fro..ACTIONS..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8390462" vertical-offset="83" max-vertical-offset="952">
-              <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
-              <folding>
-                <element signature="e#22#37#0" expanded="true" />
-                <marker date="1416785906675" expanded="true" signature="1231:1253" placeholder="SELECT * fro..CREATURE..." />
               </folding>
             </state>
           </provider>
@@ -184,10 +186,10 @@
         <option value="$PROJECT_DIR$/src/db/select_db.py" />
         <option value="$PROJECT_DIR$/src/Action.py" />
         <option value="$PROJECT_DIR$/src/CreateCreature.py" />
+        <option value="$PROJECT_DIR$/test/__init__.py" />
+        <option value="$PROJECT_DIR$/src/__init__.py" />
         <option value="$PROJECT_DIR$/src/Creature.py" />
         <option value="$PROJECT_DIR$/src/Database.py" />
-        <option value="$PROJECT_DIR$/src/__init__.py" />
-        <option value="$PROJECT_DIR$/test/__init__.py" />
       </list>
     </option>
   </component>
@@ -702,14 +704,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/src/Database.py</url>
-          <line>126</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -752,27 +747,31 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="3655">
           <caret line="103" column="32" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
           <folding>
-            <marker date="1416785385470" expanded="true" signature="1100:1152" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1100:1444" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1100:1260" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1100:1172" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1102:1172" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1476:1518" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1476:1600" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1476:1529" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1683:1739" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1683:2008" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1683:1756" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="2035:2125" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="2035:2166" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="2664:2866" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="3755:3779" placeholder="PRAGMA forei..." />
-            <marker date="1416785385470" expanded="true" signature="3833:3877" placeholder="DELETE FROM ..." />
-            <marker date="1416785385470" expanded="true" signature="4601:4638" placeholder="SELECT * FRO..CREATURE..." />
-            <marker date="1416785385470" expanded="true" signature="5479:5527" placeholder="SELECT * FRO..ATTRIBUTES..." />
-            <marker date="1416785385470" expanded="true" signature="6133:6173" placeholder="SELECT * FRO..SENSES..." />
-            <marker date="1416785385470" expanded="true" signature="6664:6726" placeholder="SELECT * FRO..ACTION_COLLECTION..." />
-            <marker date="1416785385470" expanded="true" signature="7191:7233" placeholder="SELECT * FRO..ACTIONS..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1452" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1744" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1560" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1472" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1472" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1402:1472" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1776:1818" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1776:1900" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1776:1829" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1983:2039" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1983:2308" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1983:2056" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="2335:2425" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="2335:2466" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="2964:3166" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="4081:4105" placeholder="PRAGMA forei..." />
+            <marker date="1416788580478" expanded="true" signature="4137:5635" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4890:4927" placeholder="SELECT * FRO..CREATURE..." />
+            <marker date="1416788580478" expanded="true" signature="5768:5816" placeholder="SELECT * FRO..ATTRIBUTES..." />
+            <marker date="1416788580478" expanded="true" signature="6422:6462" placeholder="SELECT * FRO..SENSES..." />
+            <marker date="1416788580478" expanded="true" signature="6953:7015" placeholder="SELECT * FRO..ACTION_COLLECTION..." />
+            <marker date="1416788580478" expanded="true" signature="7480:7522" placeholder="SELECT * FRO..ACTIONS..." />
           </folding>
         </state>
       </provider>
@@ -835,27 +834,31 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="3655">
           <caret line="103" column="32" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
           <folding>
-            <marker date="1416785385470" expanded="true" signature="1100:1152" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1100:1444" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1100:1260" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1100:1172" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1102:1172" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1476:1518" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1476:1600" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1476:1529" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1683:1739" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1683:2008" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1683:1756" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="2035:2125" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="2035:2166" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="2664:2866" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="3755:3779" placeholder="PRAGMA forei..." />
-            <marker date="1416785385470" expanded="true" signature="3833:3877" placeholder="DELETE FROM ..." />
-            <marker date="1416785385470" expanded="true" signature="4601:4638" placeholder="SELECT * FRO..CREATURE..." />
-            <marker date="1416785385470" expanded="true" signature="5479:5527" placeholder="SELECT * FRO..ATTRIBUTES..." />
-            <marker date="1416785385470" expanded="true" signature="6133:6173" placeholder="SELECT * FRO..SENSES..." />
-            <marker date="1416785385470" expanded="true" signature="6664:6726" placeholder="SELECT * FRO..ACTION_COLLECTION..." />
-            <marker date="1416785385470" expanded="true" signature="7191:7233" placeholder="SELECT * FRO..ACTIONS..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1452" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1744" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1560" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1472" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1472" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1402:1472" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1776:1818" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1776:1900" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1776:1829" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1983:2039" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1983:2308" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1983:2056" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="2335:2425" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="2335:2466" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="2964:3166" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="4081:4105" placeholder="PRAGMA forei..." />
+            <marker date="1416788580478" expanded="true" signature="4137:5635" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4890:4927" placeholder="SELECT * FRO..CREATURE..." />
+            <marker date="1416788580478" expanded="true" signature="5768:5816" placeholder="SELECT * FRO..ATTRIBUTES..." />
+            <marker date="1416788580478" expanded="true" signature="6422:6462" placeholder="SELECT * FRO..SENSES..." />
+            <marker date="1416788580478" expanded="true" signature="6953:7015" placeholder="SELECT * FRO..ACTION_COLLECTION..." />
+            <marker date="1416788580478" expanded="true" signature="7480:7522" placeholder="SELECT * FRO..ACTIONS..." />
           </folding>
         </state>
       </provider>
@@ -1207,43 +1210,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database.py">
+    <entry file="file://$PROJECT_DIR$/src/db/select_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="3570">
-          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1496">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="25" selection-end-column="14" />
           <folding>
-            <marker date="1416785385470" expanded="true" signature="1100:1152" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1100:1444" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1100:1260" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1100:1172" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1102:1172" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1476:1518" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1476:1600" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1476:1529" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1683:1739" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1683:2008" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="1683:1756" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="2035:2125" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="2035:2166" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="2664:2866" placeholder="INSERT INTO ..." />
-            <marker date="1416785385470" expanded="true" signature="3755:3779" placeholder="PRAGMA forei..." />
-            <marker date="1416785385470" expanded="true" signature="3833:3877" placeholder="DELETE FROM ..." />
-            <marker date="1416785385470" expanded="true" signature="4601:4638" placeholder="SELECT * FRO..CREATURE..." />
-            <marker date="1416785385470" expanded="true" signature="5479:5527" placeholder="SELECT * FRO..ATTRIBUTES..." />
-            <marker date="1416785385470" expanded="true" signature="6133:6173" placeholder="SELECT * FRO..SENSES..." />
-            <marker date="1416785385470" expanded="true" signature="6664:6726" placeholder="SELECT * FRO..ACTION_COLLECTION..." />
-            <marker date="1416785385470" expanded="true" signature="7191:7233" placeholder="SELECT * FRO..ACTIONS..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Creature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="349" max-vertical-offset="1258">
-          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-          <folding>
-            <element signature="e#1800#3038#0" expanded="false" />
-            <element signature="e#3091#3887#0" expanded="false" />
+            <marker date="1416584865527" expanded="true" signature="530:552" placeholder="SELECT * fro..CREATURE..." />
+            <marker date="1416584865527" expanded="true" signature="911:935" placeholder="SELECT * fro..ATTRIBUTES..." />
+            <marker date="1416584865527" expanded="true" signature="1392:1412" placeholder="SELECT * fro..SENSES..." />
+            <marker date="1416584865527" expanded="true" signature="1718:1739" placeholder="SELECT * fro..ACTIONS..." />
           </folding>
         </state>
       </provider>
@@ -1258,34 +1233,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/select_db.py">
+    <entry file="file://$PROJECT_DIR$/test/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1496">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="25" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
-            <marker date="1416584865527" expanded="true" signature="530:552" placeholder="SELECT * fro..CREATURE..." />
-            <marker date="1416584865527" expanded="true" signature="911:935" placeholder="SELECT * fro..ATTRIBUTES..." />
-            <marker date="1416584865527" expanded="true" signature="1392:1412" placeholder="SELECT * fro..SENSES..." />
-            <marker date="1416584865527" expanded="true" signature="1718:1739" placeholder="SELECT * fro..ACTIONS..." />
+            <element signature="e#22#37#0" expanded="true" />
+            <marker date="1416788182905" expanded="true" signature="1248:1270" placeholder="SELECT * fro..CREATURE..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1139">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1139">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/__init__.py">
+    <entry file="file://$PROJECT_DIR$/src/Creature.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8390462" vertical-offset="83" max-vertical-offset="952">
-          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="689" max-vertical-offset="1360">
+          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
           <folding>
-            <element signature="e#22#37#0" expanded="true" />
-            <marker date="1416785906675" expanded="true" signature="1231:1253" placeholder="SELECT * fro..CREATURE..." />
+            <element signature="e#2023#3261#0" expanded="false" />
+            <element signature="e#3314#4110#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1147542" vertical-offset="468" max-vertical-offset="3587">
+          <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
+          <folding>
+            <marker date="1416788580478" expanded="true" signature="1400:1452" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1744" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1560" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1472" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1400:1472" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1402:1472" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1776:1818" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1776:1900" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1776:1829" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1983:2039" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1983:2308" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="1983:2056" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="2335:2425" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="2335:2466" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="2964:3166" placeholder="INSERT INTO ..." />
+            <marker date="1416788580478" expanded="true" signature="4081:4105" placeholder="PRAGMA forei..." />
+            <marker date="1416788580478" expanded="true" signature="4137:5635" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4137:4181" placeholder="DELETE FROM ..." />
+            <marker date="1416788580478" expanded="true" signature="4890:4927" placeholder="SELECT * FRO..CREATURE..." />
+            <marker date="1416788580478" expanded="true" signature="5768:5816" placeholder="SELECT * FRO..ATTRIBUTES..." />
+            <marker date="1416788580478" expanded="true" signature="6422:6462" placeholder="SELECT * FRO..SENSES..." />
+            <marker date="1416788580478" expanded="true" signature="6953:7015" placeholder="SELECT * FRO..ACTION_COLLECTION..." />
+            <marker date="1416788580478" expanded="true" signature="7480:7522" placeholder="SELECT * FRO..ACTIONS..." />
           </folding>
         </state>
       </provider>

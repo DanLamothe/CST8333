@@ -14,18 +14,24 @@ import Creature
 
 class Database:
 
+    # These Module Variables are used to differentiate between testing and production db access
+    project_db_location = 'db\cst8333.db'
+    test_db_location = '..\src\db\cst8333.db'
+
     # Default Constructor
     def __init__(self):
         pass
-
     def handle_exception(e):
         print(e)
         pass
 
     @staticmethod
-    def save(creature):
+    def save(creature, is_test):
         try:
-            db = sqlite3.connect('db\cst8333.db')
+            if is_test:
+                db = sqlite3.connect('..\src\db\cst8333.db')
+            else:
+                db = sqlite3.connect('db\cst8333.db')
             print("Opened database successfully.")
             cursor = db.cursor()
 
@@ -72,47 +78,42 @@ class Database:
             print(e)
             print(e.l)
             db.rollback()
-#        else:
-#            print("Unknown Error... Exiting")
-#            db.rollback()
         finally:
             db.close()
 
-    def update(self, creature):
+    def update(creature):
         pass
 
     @staticmethod
-    def delete(creature):
+    def delete(creature_name, is_test):
         try:
-            db = sqlite3.connect('db\cst8333.db')
+            if is_test:
+                db = sqlite3.connect('..\src\db\cst8333.db')
+            else:
+                db = sqlite3.connect('db\cst8333.db')
             print("Opened database successfully.")
 
             cursor = db.cursor()
 
             # Turns on Foreign Key Constraint for cascade delete
             cursor.execute('PRAGMA foreign_keys = ON;')
-
-            var = str.format('''
-                DELETE FROM CREATURE WHERE CREATURE.name = ?
-            ''', creature.name)
-
-            cursor.execute(var)
+            cursor.execute('DELETE FROM CREATURE WHERE CREATURE.name = ?', (creature_name,))
             db.commit()
             print("Changes saved.")
 
         except Exception as e:
             print(e)
             db.rollback()
-        else:
-            print("Unknown Error... Exiting")
-            db.rollback()
         finally:
             db.close()
 
     @staticmethod
-    def read(creature_name):
+    def read(creature_name, is_test):
         try:
-            db = sqlite3.connect('db\cst8333.db')
+            if is_test:
+                db = sqlite3.connect('..\src\db\cst8333.db')
+            else:
+                db = sqlite3.connect('db\cst8333.db')
             print("Opened database successfully.")
             cursor = db.cursor()
             print('*** Cursor set')

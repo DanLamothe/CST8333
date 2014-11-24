@@ -4,6 +4,7 @@ __author__ = 'User'
 import Creature
 import Action
 import sqlite3
+import Database
 
 
 def test_creature_create():
@@ -31,7 +32,7 @@ def test_creature_create():
     #                                languages, challenge_rating, action_set)
     myCreature = Creature.Creature('Test', 'Small', 'Dragon', 'LG', 16, '100', '35 ft.', attributes, senses,
                                    'Draconic Common', '4', action_set)
-    myCreature.save()
+    myCreature.save(1)
 
 
 def test_creature_select():
@@ -44,8 +45,15 @@ def test_creature_select():
     db.close()
 
 
+def test_creature_delete():
+    creature_name = input('Name of Creature to Delete:')
+    Database.Database.delete(creature_name, 1)
 # Creature Creation Test Code (Uncomment to test)
 # test_creature_create()
 
 # Creature SELECT Test Code (Uncomment to test)
+test_creature_select()
+
+# Creature DELETE Test Code
+test_creature_delete()
 test_creature_select()

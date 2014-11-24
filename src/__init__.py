@@ -52,10 +52,10 @@ while True:
 
     # Creates a Creature Object through Prompts, saves the completed Creature into the database
     elif selection == '1':
-        CreateCreature.prompt_create().save()
+        CreateCreature.prompt_create().save(False)
 
     elif selection == '2':
-        menu_creature = Database.Database.read('Dire TunaFish')
+        menu_creature = Database.Database.read('Dire TunaFish', False)
         menu_creature.export(menu_creature.to_dict())
 
     else:

@@ -54,14 +54,20 @@ class Creature:
 
         # need Action (Created Elsewhere, already attached in actionSet)
 
-    def save(self):
-        Database.Database.save(self)
+    def save(self, is_test):
+        if is_test:
+            Database.Database.save(self, True)
+        else:
+            Database.Database.save(self, False)
 
-    def update(self):
+    def update(self, is_test):
         pass
 
-    def delete(self):
-        Database.Database.delete(self)
+    def delete(self, is_test):
+        if is_test:
+            Database.Database.delete(self.name, True)
+        else:
+            Database.Database.delete(self.name, False)
 
     def to_dict(self):
         my_dict = {}
