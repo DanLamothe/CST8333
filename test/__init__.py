@@ -10,6 +10,7 @@ import Creature
 import Action
 import Database
 
+
 # Populates the database with a sample test record for testing, saves time.
 def test_creature_create():
     attributes = {}
