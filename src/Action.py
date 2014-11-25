@@ -1,4 +1,9 @@
-__author__ = 'User'
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# File Name: Action.py
+# By: Daniel Lamothe
+#
+# Purpose: A simple object representing an Action a Creature can take. Used to house Action information.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class Action:
@@ -11,6 +16,7 @@ class Action:
     def __init__(self):
             pass
 
+    # Constructor with provided parameters
     def __init__(self, name, desc, attack, hit):
         self.name = name
         self.desc = desc

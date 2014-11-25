@@ -1,12 +1,16 @@
-__author__ = 'User'
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# File Name: test\__init__.py
+# By: Daniel Lamothe
+#
+# Purpose: Start-up file for testing the Fantasy Creature CRUD application. The developer uses this file to launch
+#           test functions to simulate data entry.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 import Creature
 import Action
-import sqlite3
 import Database
 
-
+# Populates the database with a sample test record for testing, saves time.
 def test_creature_create():
     attributes = {}
     senses = {}
@@ -35,15 +39,18 @@ def test_creature_create():
     myCreature.save(1)
 
 
+# Reads all database records and prints to console.
 def test_creature_select():
     Database.Database.print_all_creatures(True)
 
 
+# Tests delete functionality
 def test_creature_delete():
     creature_name = input('Name of Creature to Delete:')
     Database.Database.delete(creature_name, True)
 
 
+# Tests Read functionality
 def test_creature_read():
     creature_name = input('Name of Creature to load into memory:')
     read_creature = Database.Database.read(creature_name, True)
@@ -51,6 +58,7 @@ def test_creature_read():
     return read_creature
 
 
+# Tests export functionality
 def test_creature_export():
     creature = test_creature_read()
     creature.export(creature.to_dict(), True)

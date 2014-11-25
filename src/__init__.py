@@ -2,28 +2,15 @@
 # File Name: __init__.py
 # By: Daniel Lamothe
 #
-# Purpose: CST8333 Demo for Assignment 04. Creates and populates the database with a sample creature. Reads the database
-#   and stores the values in a Creature object. Manipulation of dictionary objects and the Template module, the script
-#   substitutes values in the dictionary into the supplied HTML template. A new file is created depicting the creature
-#   in statistical form.
+# Purpose: Start-up file for the Fantasy Creature CRUD application. This script prompts the user for basic choices to
+#           guide the progression of the application.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-__author__ = 'User'
-
-import os
 import Database
 import CreateCreature
-
-
-
-print('\nTASK1 - Database successfully set up!\n')
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# TASK 2: UI
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import Creature
 
 menu = {'0': "Exit", '1': "Create Creature", '2': "Export Creature"}
-
 while True:
     options = menu.keys()
 
@@ -34,7 +21,7 @@ while True:
     print('(1) View Creature Records')
     print('(2) Export Statblock')
     print('(3) Create a Creature')
-    print('(4) Update an Existing Creature')
+    print('(4) Update an Existing Creature - BETA')
     print('(5) Delete an Existing Creature')
     selection = input("\nPlease Select your option:")
 
@@ -54,10 +41,14 @@ while True:
     elif selection == '3':
         CreateCreature.prompt_create().save(False)
 
+    # Update functionality is in Beta, not guaranteed to work.
+    elif selection == '4':
+        u_creature = Creature.Creature()
+        u_creature.update(False)
+
     elif selection == '5':
         user_input = input('Name of Creature: ')
         Database.Database.delete(user_input, False)
 
     else:
         print('Unknown option selected. Please try again.')
-

@@ -1,11 +1,9 @@
-__author__ = 'User'
-
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # File Name: Database.py
 # By: Daniel Lamothe
 #
-# Purpose: CST8333 Demo for Assignment 04. Creates a database object which will handle the connection to the sqlite3
-# database file and all data manipulations for a current session. Ensures any resources are closed when task is done.
+# Purpose: Data Access layer for the application. Recevieves references to a Creature object to persist/update, or the
+#           name of an existing database record for deletion. Can also read records from the database.
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 import sqlite3
@@ -21,10 +19,12 @@ class Database:
     def __init__(self):
         pass
 
+    # Function handles simple exceptions for debug purposes
     def handle_exception(e):
         print(e)
         pass
 
+    # Reads and prints all records in the database.
     @staticmethod
     def print_all_creatures(is_test):
         if is_test:
@@ -37,6 +37,7 @@ class Database:
             print(row)
         db.close()
 
+    # Provided a reference to a Creature object, persists it in the database.
     @staticmethod
     def save(creature, is_test):
         try:
@@ -93,6 +94,7 @@ class Database:
         finally:
             db.close()
 
+    # Provided a reference to a Creature object and the original record's name, updates the exiting record
     @staticmethod
     def update(creature, original_name, is_test):
         try:
@@ -154,6 +156,7 @@ class Database:
         finally:
             db.close()
 
+    # Provided a name of an existing creature record, deletes the record.
     @staticmethod
     def delete(creature_name, is_test):
         try:
@@ -177,6 +180,7 @@ class Database:
         finally:
             db.close()
 
+    # Provided the name of an existing creature record, restores the creature from the database into memory
     @staticmethod
     def read(creature_name, is_test):
         try:

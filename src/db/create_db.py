@@ -2,11 +2,8 @@
 # File Name: create_db.py
 # By: Daniel Lamothe
 #
-# Purpose: Drops any existing tables and rebuilds the database architecture.
+# Purpose: Drops any existing tables and rebuilds the database architecture. To be used to wipe the database.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-__author__ = 'User'
-
 
 import sqlite3
 

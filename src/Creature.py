@@ -1,5 +1,3 @@
-__author__ = 'User'
-
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # File Name: Creature.py
 # By: Daniel Lamothe
@@ -55,12 +53,14 @@ class Creature:
 
         # need Action (Created Elsewhere, already attached in actionSet)
 
+    # Delegates to the Database.py module to persist the current creature
     def save(self, is_test):
         if is_test:
             Database.Database.save(self, True)
         else:
             Database.Database.save(self, False)
 
+    # Delegates to the Database.py module to update the current creature
     def update(self, is_test):
         user_choice = input('\nAlter Creature MetaData? (Y/N)')
         original_name = self.name
@@ -101,12 +101,14 @@ class Creature:
         print('Attempting Update...')
         Database.Database.update(self, original_name, is_test)
 
+    # Delegates to the Database.py module to delete the current creature from teh database
     def delete(self, is_test):
         if is_test:
             Database.Database.delete(self.name, True)
         else:
             Database.Database.delete(self.name, False)
 
+    # Converts the current creature into a custom Dictionary datatype for use in HTML export
     def to_dict(self):
         my_dict = {}
         my_dict.__setitem__('name', self.name)
@@ -134,9 +136,11 @@ class Creature:
 
         return my_dict
 
+    # String representation of the creature for debug purposes
     def to_string(self):
         print(str(self))
 
+    # Provided a Dictionary-version of a Creature, can export the information in the form of a stat block
     @staticmethod
     def export(my_dict, is_test):
         try:
