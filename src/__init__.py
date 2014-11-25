@@ -36,14 +36,14 @@ while True:
     elif selection == '2':
         user_input = input('Name of Creature: ')
         menu_creature = Database.Database.read(user_input, False)
-        menu_creature.export(menu_creature.to_dict())
+        menu_creature.export(menu_creature.to_dict(), False)
 
     elif selection == '3':
         CreateCreature.prompt_create().save(False)
 
     # Update functionality is in Beta, not guaranteed to work.
     elif selection == '4':
-        u_creature = Creature.Creature()
+        u_creature = Creature.Creature('','','','','','','','','','','','',)
         u_creature.update(False)
 
     elif selection == '5':

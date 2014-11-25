@@ -37,7 +37,7 @@ def test_creature_create():
     #                                languages, challenge_rating, action_set)
     myCreature = Creature.Creature('Test', 'Small', 'Dragon', 'LG', 16, '100', '35 ft.', attributes, senses,
                                    'Draconic Common', '4', action_set)
-    myCreature.save(1)
+    myCreature.save(True)
 
 
 # Reads all database records and prints to console.
@@ -55,6 +55,7 @@ def test_creature_delete():
 def test_creature_read():
     creature_name = input('Name of Creature to load into memory:')
     read_creature = Database.Database.read(creature_name, True)
+    assert read_creature == isinstance(Creature.Creature)
     print(read_creature.name)
     return read_creature
 
