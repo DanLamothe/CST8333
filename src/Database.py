@@ -31,7 +31,7 @@ class Database:
             db = sqlite3.connect('..\src\db\cst8333.db')
         else:
             db = sqlite3.connect('db\cst8333.db')
-            print("Opened database successfully.")
+        print("Opened database successfully.")
         cursor = db.execute("SELECT * FROM CREATURE")
         for row in cursor:
             print(row)
